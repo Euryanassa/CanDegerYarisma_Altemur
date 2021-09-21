@@ -1,6 +1,6 @@
-# CanDegerYarisma_Altemur
+# ALTEMUR ÇELİKAYAR
+# CAN DEĞER, WHATSAPP PROGRAMI YARIŞMASI
 
-## Aynı kodun bir normal hali bir de Jupyter Notebook görünümü
+### NE KULLANDIM
 
-# Eklenen CSV datasınndaki verilerle oynayarak test yapabilirsiniz.
-## Teşekkürler
+![PYWHAT IMAGE ONE 1](https://user-images.githubusercontent.com/67932543/134151961-49ade9b7-43e9-4724-b28e-0e10760c825e.PNG)
