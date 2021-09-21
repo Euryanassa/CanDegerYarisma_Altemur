@@ -232,7 +232,8 @@ class WhatMsg():
                         #Bilgilendirme Aşaması
                         # print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
         else:pass
-
+        
+    # Chrome tabında ctr w yapar ve uyarı mesajına da entera basar ve kapar.
     def TabCloser():
         time.sleep(2)
         keyboard.press_and_release('ctrl+w')
