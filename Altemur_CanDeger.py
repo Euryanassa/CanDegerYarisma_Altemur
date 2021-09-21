@@ -1,6 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PythonMessage import WhatMsg
 import webbrowser
+import keyboard
+import time
 
 # Arayüz Kodu
 
@@ -175,7 +177,7 @@ class WhatMsg():
     # Excell indirme fonksiyonu
     def DownloadExcell():
         # pandas ile bir dataframe oluşturuyoruz ve excell'e yazdırıyoruz
-        df = pd.DataFrame([["5554443322 (0'sız)","Örnek Satırıdır, Silmeyiniz. Mesajınızı Bu Sütuna Yazınız","2021","12","31","24","59"]],
+        df = pd.DataFrame([["5554443322 (0'sız)","Örnek Satırıdır, Silmeyiniz","2021","12","31","24","59"]],
                           columns=['Telefon','Mesaj','Yıl','Ay','Gün','Saat','Dakika'])
         # Excell oluşturma kodu
         df.to_excel('MesajExcel.xlsx', index = False)
@@ -206,30 +208,41 @@ class WhatMsg():
                 # İlk satırımızı bu if'de yolladık
                 if i==1:
                     py.sendwhatmsg(f"+90"+str(df["Telefon"][i]),str(df["Mesaj"][i]),int(df["Saat"][i]),int(df["Dakika"][i]))
+                    WhatMsg.TabCloser()
                     
                     # Bilgilendirme aşaması: 
-                    print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
+                    # print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
+                    
                 
                 # Eğer gün ve dakika verisi birbirine eşit değilse, mesajımızı girilen saate göre yolluyoruz
                 elif i>1:
                     if (int(df["Dakika"][i])!=int(df["Dakika"][i-1]) and int(df["Saat"][i-1])!=int(df["Saat"][i-1])):
                         py.sendwhatmsg(f"+90"+str(df["Telefon No"][i]),str(df["Mesaj"][i]),int(df["Saat"][i]),int(df["Dakika"][i]))
+                        WhatMsg.TabCloser()
                         
                         # Bilgilendirme aşaması:  
-                        print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
+                        # print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
                     # Eğer gün ve dakikalarımız üstü üste binmişse, mesajımızı direkt gönderiyoruz. çünkü zamanı geldiğinden
                     # dolayı bir satır üstteki mesajı yolladıysa, deiğer mesaj otomatikmen 24 saat sonraya zamanlanıyor.
                     # Bu şekilde bu hatanın önüne geçmiş oluyoruz
-                    elif int(df["Saat"][i])==int(df["Saat"][i-1]):
+                    elif int(df["Dakika"][i])==int(df["Dakika"][i-1]) and int(df["Saat"][i])==int(df["Saat"][i-1]):
                         py.sendwhatmsg_instantly(f"+90"+str(df["Telefon"][i]),str(df["Mesaj"][i]))
+                        WhatMsg.TabCloser()
                         
                         #Bilgilendirme Aşaması
-                        #print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
+                        # print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
         else:pass
+
+    def TabCloser():
+        time.sleep(2)
+        keyboard.press_and_release('ctrl+w')
+        time.sleep(2)
+        keyboard.press_and_release('enter')
 
     # Kodumuzu bir kişiye gönderme foksiyonumuz
     def SendOne(P,M,H,S):
         py.sendwhatmsg(f"+90"+P,M,int(H),int(S))
+        WhatMsg.TabCloser()
 
     # Multi işlem yapmak adına threading kullnaıyoruz
     def ThreadSendMsg(input_Func,args=None):
