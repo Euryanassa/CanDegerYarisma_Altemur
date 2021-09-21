@@ -175,7 +175,7 @@ class WhatMsg():
     # Excell indirme fonksiyonu
     def DownloadExcell():
         # pandas ile bir dataframe oluşturuyoruz ve excell'e yazdırıyoruz
-        df = pd.DataFrame([["5554443322 (0'sız)","Örnek Satırıdır, Silmeyiniz","2021","12","31","24","59"]],
+        df = pd.DataFrame([["5554443322 (0'sız)","Örnek Satırıdır, Silmeyiniz. Mesajınızı Buraya Yazınız","2021","12","31","24","59"]],
                           columns=['Telefon','Mesaj','Yıl','Ay','Gün','Saat','Dakika'])
         # Excell oluşturma kodu
         df.to_excel('MesajExcel.xlsx', index = False)
