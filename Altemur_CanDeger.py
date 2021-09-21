@@ -224,7 +224,7 @@ class WhatMsg():
                         py.sendwhatmsg_instantly(f"+90"+str(df["Telefon"][i]),str(df["Mesaj"][i]))
                         
                         #Bilgilendirme Aşaması
-                        print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
+                        #print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
         else:pass
 
     # Kodumuzu bir kişiye gönderme foksiyonumuz
