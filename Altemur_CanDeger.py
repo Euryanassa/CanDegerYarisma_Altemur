@@ -247,7 +247,7 @@ class WhatMsg():
         else:pass
 
     def TabCloser():
-        time.sleep(2)
+        time.sleep(6)
         keyboard.press_and_release('ctrl+w')
         time.sleep(2)
         keyboard.press_and_release('enter')
