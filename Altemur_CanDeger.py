@@ -8,19 +8,19 @@ import qdarkstyle
 
 # Arayüz Kodu
 
-class Ui_qtUIWhatttt(object):
-    def setupUi(self, qtUIWhatttt):
+class Ui_qtUIWhattttv1_3(object):
+    def setupUi(self, qtUIWhattttv1_3):
         # Programımızın adı
-        qtUIWhatttt.setObjectName("qtUIWhatttt")
+        qtUIWhattttv1_3.setObjectName("qtUIWhattttv1_3")
         # Pencere boyutu
-        qtUIWhatttt.resize(574, 461)
+        qtUIWhattttv1_3.resize(574, 461)
         # setup stylesheet
-        qtUIWhatttt.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+        qtUIWhattttv1_3.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
         # or in new API
-        qtUIWhatttt.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
+        qtUIWhattttv1_3.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
         
         # Butonun işlevini girdik
-        self.EmptyFormat = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("EmptyFormat"))
+        self.EmptyFormat = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("EmptyFormat"))
         # Buton başlangıç koordinatları ve boyutu
         self.EmptyFormat.setGeometry(QtCore.QRect(50, 30, 231, 51))
         # Butonun temsili ismi
@@ -31,21 +31,21 @@ class Ui_qtUIWhatttt(object):
         # window = QtWidgets.QMainWindow()
 
         # Butonun işlevini girdik
-        self.Gonder = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("Gonder"))
+        self.Gonder = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("Gonder"))
         # Buton başlangıç koordinatları ve boyutu
         self.Gonder.setGeometry(QtCore.QRect(50, 90, 231, 51))
         # Butonun temsili ismi
         self.Gonder.setObjectName("Gonder")
 
         # Butonun işlevini girdik
-        self.DGKO = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("DGKO"))
+        self.DGKO = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("DGKO"))
         # Buton başlangıç koordinatları ve boyutu
         self.DGKO.setGeometry(QtCore.QRect(350, 400, 171, 31))
         # Butonun temsili ismi
         self.DGKO.setObjectName("DGKO")
 
         # Output çıktısını veren paneli tanımladık
-        self.Output = QtWidgets.QLabel(qtUIWhatttt)
+        self.Output = QtWidgets.QLabel(qtUIWhattttv1_3)
         # Etiketin boyutu
         self.Output.setGeometry(QtCore.QRect(50, 150, 471, 51))
         # Çıkarılan yazının boyutu ve sitili
@@ -60,21 +60,21 @@ class Ui_qtUIWhatttt(object):
         self.Output.setObjectName("Output")
 
         # Butonun işlevini girdik
-        self.UploadExcell = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("UploadExcell"))
+        self.UploadExcell = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("UploadExcell"))
         # Buton başlangıç koordinatları ve boyutu
         self.UploadExcell.setGeometry(QtCore.QRect(290, 30, 231, 51))
         # Butonun temsili ismi
         self.UploadExcell.setObjectName("UploadExcell")
 
         # Butonun işlevini girdik
-        self.Temizle = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("Temizle"))
+        self.Temizle = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("Temizle"))
         # Buton başlangıç koordinatları ve boyutu
         self.Temizle.setGeometry(QtCore.QRect(290, 90, 231, 51))
         # Butonun temsili ismi
         self.Temizle.setObjectName("Temizle")
 
         # Text girilen yerin tanımı
-        self.Telefon = QtWidgets.QPlainTextEdit(qtUIWhatttt)
+        self.Telefon = QtWidgets.QPlainTextEdit(qtUIWhattttv1_3)
         # Text girilen yerin boyutu ve koordinatları
         self.Telefon.setGeometry(QtCore.QRect(50, 210, 471, 31))
         # Yazımdan önce görülecek uyarı yazısı
@@ -83,7 +83,7 @@ class Ui_qtUIWhatttt(object):
         self.Telefon.setObjectName("Telefon")
 
         # Spin kutusu(Dakika İçin) tanımladık
-        self.DK = QtWidgets.QSpinBox(qtUIWhatttt)
+        self.DK = QtWidgets.QSpinBox(qtUIWhattttv1_3)
         # Spin kutusu boyutu ve koordinatları
         self.DK.setGeometry(QtCore.QRect(290, 400, 51, 31))
         # Spin kutusuna girilebilecek minimum değer
@@ -94,7 +94,7 @@ class Ui_qtUIWhatttt(object):
         self.DK.setObjectName("DK")
 
         # Spin kutusu(Saat İçin) tanımladık
-        self.SAAT = QtWidgets.QSpinBox(qtUIWhatttt)
+        self.SAAT = QtWidgets.QSpinBox(qtUIWhattttv1_3)
         # Spin kutusu boyutu ve koordinatları
         self.SAAT.setGeometry(QtCore.QRect(230, 400, 51, 31))
         # Spin kutusuna girilebilecek maksimum değer
@@ -103,7 +103,7 @@ class Ui_qtUIWhatttt(object):
         self.SAAT.setObjectName("SAAT")
 
         # Text kutusnu tanımladık (Mesaj için)
-        self.Mesaj = QtWidgets.QPlainTextEdit(qtUIWhatttt)
+        self.Mesaj = QtWidgets.QPlainTextEdit(qtUIWhattttv1_3)
         # Text kutusunun boyutu ve koordinatları
         self.Mesaj.setGeometry(QtCore.QRect(50, 250, 471, 141))
         # İçiresinde bulunan kaybolan mesajımızı girdik ve bendenizin ismi.
@@ -120,15 +120,15 @@ Written by,
         self.Mesaj.setObjectName("Mesaj")
 
         # Butonun işlevini girdik
-        self.Supra = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("Supra"))
+        self.Supra = QtWidgets.QPushButton(qtUIWhattttv1_3, clicked = lambda: self.PressButton("Supra"))
         # Butonun boyutu ve koordinatları
         self.Supra.setGeometry(QtCore.QRect(50, 400, 171, 31))
         # SUPRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA temsili ismi
         self.Supra.setObjectName("Supra")
 #--------------------------------------------------------------------------------------------------
         # pencere parametreleri
-        self.retranslateUi(qtUIWhatttt)
-        QtCore.QMetaObject.connectSlotsByName(qtUIWhatttt)
+        self.retranslateUi(qtUIWhattttv1_3)
+        QtCore.QMetaObject.connectSlotsByName(qtUIWhattttv1_3)
 
     # Butonlara basınca çalışacaklar ve işlevleri
     def PressButton(self,pressed):
@@ -159,15 +159,15 @@ Written by,
             webbrowser.open_new("https://www.youtube.com/watch?v=b8gq88TTCzU")
 
     # Butonların görünen isimleri ve pencere isimleri
-    def retranslateUi(self, qtUIWhatttt):
+    def retranslateUi(self, qtUIWhattttv1_3):
         _translate = QtCore.QCoreApplication.translate
-        qtUIWhatttt.setWindowTitle(_translate("qtUIWhatttt", "qtUIWhatttt"))
-        self.EmptyFormat.setText(_translate("qtUIWhatttt", "Excell Format Dosyası"))
-        self.Gonder.setText(_translate("qtUIWhatttt", "Listedekilere Mesajı Gönder"))
-        self.DGKO.setText(_translate("qtUIWhatttt", "Doğum Günü Mesajı Gönder"))
-        self.UploadExcell.setText(_translate("qtUIWhatttt", "Excell Dosyası Kontrol"))
-        self.Temizle.setText(_translate("qtUIWhatttt", "Listeyi Tezmile"))
-        self.Supra.setText(_translate("qtUIWhatttt", "SUPRAA!"))
+        qtUIWhattttv1_3.setWindowTitle(_translate("qtUIWhattttv1_3", "qtUIWhattttv1_3"))
+        self.EmptyFormat.setText(_translate("qtUIWhattttv1_3", "Excell Format Dosyası"))
+        self.Gonder.setText(_translate("qtUIWhattttv1_3", "Listedekilere Mesajı Gönder"))
+        self.DGKO.setText(_translate("qtUIWhattttv1_3", "Doğum Günü Mesajı Gönder"))
+        self.UploadExcell.setText(_translate("qtUIWhattttv1_3", "Excell Dosyası Kontrol"))
+        self.Temizle.setText(_translate("qtUIWhattttv1_3", "Listeyi Tezmile"))
+        self.Supra.setText(_translate("qtUIWhattttv1_3", "SUPRAA!"))
         
 
 import pywhatkit as py
@@ -285,8 +285,8 @@ class WhatMsg():
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    qtUIWhatttt = QtWidgets.QWidget()
-    ui = Ui_qtUIWhatttt()
-    ui.setupUi(qtUIWhatttt)
-    qtUIWhatttt.show()
+    qtUIWhattttv1_3 = QtWidgets.QWidget()
+    ui = Ui_qtUIWhattttv1_3()
+    ui.setupUi(qtUIWhattttv1_3)
+    qtUIWhattttv1_3.show()
     sys.exit(app.exec_())
