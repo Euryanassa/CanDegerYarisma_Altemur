@@ -8,19 +8,19 @@ import qdarkstyle
 
 # Arayüz Kodu
 
-class Ui_WP_AutoSender_by_Altemur_v1_3(object):
-    def setupUi(self, WP_AutoSender_by_Altemur_v1_3):
+class Ui_WP_AutoSender_by_Altemur_v1_3_1(object):
+    def setupUi(self, WP_AutoSender_by_Altemur_v1_3_1):
         # Programımızın adı
-        WP_AutoSender_by_Altemur_v1_3.setObjectName("WP_AutoSender_by_Altemur_v1_3")
+        WP_AutoSender_by_Altemur_v1_3_1.setObjectName("WP_AutoSender_by_Altemur_v1_3_1")
         # Pencere boyutu
-        WP_AutoSender_by_Altemur_v1_3.resize(574, 461)
+        WP_AutoSender_by_Altemur_v1_3_1.resize(574, 461)
         # setup stylesheet
-        WP_AutoSender_by_Altemur_v1_3.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+        WP_AutoSender_by_Altemur_v1_3_1.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
         # or in new API
-        WP_AutoSender_by_Altemur_v1_3.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
+        WP_AutoSender_by_Altemur_v1_3_1.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
         
         # Butonun işlevini girdik
-        self.EmptyFormat = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("EmptyFormat"))
+        self.EmptyFormat = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("EmptyFormat"))
         # Buton başlangıç koordinatları ve boyutu
         self.EmptyFormat.setGeometry(QtCore.QRect(50, 30, 231, 51))
         # Butonun temsili ismi
@@ -31,21 +31,21 @@ class Ui_WP_AutoSender_by_Altemur_v1_3(object):
         # window = QtWidgets.QMainWindow()
 
         # Butonun işlevini girdik
-        self.Gonder = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("Gonder"))
+        self.Gonder = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("Gonder"))
         # Buton başlangıç koordinatları ve boyutu
         self.Gonder.setGeometry(QtCore.QRect(50, 90, 231, 51))
         # Butonun temsili ismi
         self.Gonder.setObjectName("Gonder")
 
         # Butonun işlevini girdik
-        self.DGKO = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("DGKO"))
+        self.DGKO = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("DGKO"))
         # Buton başlangıç koordinatları ve boyutu
         self.DGKO.setGeometry(QtCore.QRect(350, 400, 171, 31))
         # Butonun temsili ismi
         self.DGKO.setObjectName("DGKO")
 
         # Output çıktısını veren paneli tanımladık
-        self.Output = QtWidgets.QLabel(WP_AutoSender_by_Altemur_v1_3)
+        self.Output = QtWidgets.QLabel(WP_AutoSender_by_Altemur_v1_3_1)
         # Etiketin boyutu
         self.Output.setGeometry(QtCore.QRect(50, 150, 471, 51))
         # Çıkarılan yazının boyutu ve sitili
@@ -60,21 +60,21 @@ class Ui_WP_AutoSender_by_Altemur_v1_3(object):
         self.Output.setObjectName("Output")
 
         # Butonun işlevini girdik
-        self.UploadExcell = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("UploadExcell"))
+        self.UploadExcell = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("UploadExcell"))
         # Buton başlangıç koordinatları ve boyutu
         self.UploadExcell.setGeometry(QtCore.QRect(290, 30, 231, 51))
         # Butonun temsili ismi
         self.UploadExcell.setObjectName("UploadExcell")
 
         # Butonun işlevini girdik
-        self.Temizle = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("Temizle"))
+        self.Temizle = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("Temizle"))
         # Buton başlangıç koordinatları ve boyutu
         self.Temizle.setGeometry(QtCore.QRect(290, 90, 231, 51))
         # Butonun temsili ismi
         self.Temizle.setObjectName("Temizle")
 
         # Text girilen yerin tanımı
-        self.Telefon = QtWidgets.QPlainTextEdit(WP_AutoSender_by_Altemur_v1_3)
+        self.Telefon = QtWidgets.QPlainTextEdit(WP_AutoSender_by_Altemur_v1_3_1)
         # Text girilen yerin boyutu ve koordinatları
         self.Telefon.setGeometry(QtCore.QRect(50, 210, 471, 31))
         # Yazımdan önce görülecek uyarı yazısı
@@ -83,7 +83,7 @@ class Ui_WP_AutoSender_by_Altemur_v1_3(object):
         self.Telefon.setObjectName("Telefon")
 
         # Spin kutusu(Dakika İçin) tanımladık
-        self.DK = QtWidgets.QSpinBox(WP_AutoSender_by_Altemur_v1_3)
+        self.DK = QtWidgets.QSpinBox(WP_AutoSender_by_Altemur_v1_3_1)
         # Spin kutusu boyutu ve koordinatları
         self.DK.setGeometry(QtCore.QRect(290, 400, 51, 31))
         # Spin kutusuna girilebilecek minimum değer
@@ -94,7 +94,7 @@ class Ui_WP_AutoSender_by_Altemur_v1_3(object):
         self.DK.setObjectName("DK")
 
         # Spin kutusu(Saat İçin) tanımladık
-        self.SAAT = QtWidgets.QSpinBox(WP_AutoSender_by_Altemur_v1_3)
+        self.SAAT = QtWidgets.QSpinBox(WP_AutoSender_by_Altemur_v1_3_1)
         # Spin kutusu boyutu ve koordinatları
         self.SAAT.setGeometry(QtCore.QRect(230, 400, 51, 31))
         # Spin kutusuna girilebilecek maksimum değer
@@ -103,7 +103,7 @@ class Ui_WP_AutoSender_by_Altemur_v1_3(object):
         self.SAAT.setObjectName("SAAT")
 
         # Text kutusnu tanımladık (Mesaj için)
-        self.Mesaj = QtWidgets.QPlainTextEdit(WP_AutoSender_by_Altemur_v1_3)
+        self.Mesaj = QtWidgets.QPlainTextEdit(WP_AutoSender_by_Altemur_v1_3_1)
         # Text kutusunun boyutu ve koordinatları
         self.Mesaj.setGeometry(QtCore.QRect(50, 250, 471, 141))
         # İçiresinde bulunan kaybolan mesajımızı girdik ve bendenizin ismi.
@@ -120,15 +120,15 @@ Written by,
         self.Mesaj.setObjectName("Mesaj")
 
         # Butonun işlevini girdik
-        self.Supra = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3, clicked = lambda: self.PressButton("Supra"))
+        self.Supra = QtWidgets.QPushButton(WP_AutoSender_by_Altemur_v1_3_1, clicked = lambda: self.PressButton("Supra"))
         # Butonun boyutu ve koordinatları
         self.Supra.setGeometry(QtCore.QRect(50, 400, 171, 31))
         # SUPRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA temsili ismi
         self.Supra.setObjectName("Supra")
 #--------------------------------------------------------------------------------------------------
         # pencere parametreleri
-        self.retranslateUi(WP_AutoSender_by_Altemur_v1_3)
-        QtCore.QMetaObject.connectSlotsByName(WP_AutoSender_by_Altemur_v1_3)
+        self.retranslateUi(WP_AutoSender_by_Altemur_v1_3_1)
+        QtCore.QMetaObject.connectSlotsByName(WP_AutoSender_by_Altemur_v1_3_1)
 
     # Butonlara basınca çalışacaklar ve işlevleri
     def PressButton(self,pressed):
@@ -159,15 +159,15 @@ Written by,
             webbrowser.open_new("https://www.youtube.com/watch?v=b8gq88TTCzU")
 
     # Butonların görünen isimleri ve pencere isimleri
-    def retranslateUi(self, WP_AutoSender_by_Altemur_v1_3):
+    def retranslateUi(self, WP_AutoSender_by_Altemur_v1_3_1):
         _translate = QtCore.QCoreApplication.translate
-        WP_AutoSender_by_Altemur_v1_3.setWindowTitle(_translate("WP_AutoSender_by_Altemur_v1_3", "WP_AutoSender_by_Altemur_v1_3"))
-        self.EmptyFormat.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "Excell Format Dosyası"))
-        self.Gonder.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "Listedekilere Mesajı Gönder"))
-        self.DGKO.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "Doğum Günü Mesajı Gönder"))
-        self.UploadExcell.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "Excell Dosyası Kontrol"))
-        self.Temizle.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "Listeyi Tezmile"))
-        self.Supra.setText(_translate("WP_AutoSender_by_Altemur_v1_3", "SUPRAA!"))
+        WP_AutoSender_by_Altemur_v1_3_1.setWindowTitle(_translate("WP_AutoSender_by_Altemur_v1_3_1", "WP_AutoSender_by_Altemur_v1_3_1"))
+        self.EmptyFormat.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "Excell Format Dosyası"))
+        self.Gonder.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "Listedekilere Mesajı Gönder"))
+        self.DGKO.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "Doğum Günü Mesajı Gönder"))
+        self.UploadExcell.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "Excell Dosyası Kontrol"))
+        self.Temizle.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "Listeyi Tezmile"))
+        self.Supra.setText(_translate("WP_AutoSender_by_Altemur_v1_3_1", "SUPRAA!"))
         
 
 import pywhatkit as py
@@ -285,8 +285,8 @@ class WhatMsg():
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    WP_AutoSender_by_Altemur_v1_3 = QtWidgets.QWidget()
-    ui = Ui_WP_AutoSender_by_Altemur_v1_3()
-    ui.setupUi(WP_AutoSender_by_Altemur_v1_3)
-    WP_AutoSender_by_Altemur_v1_3.show()
+    WP_AutoSender_by_Altemur_v1_3_1 = QtWidgets.QWidget()
+    ui = Ui_WP_AutoSender_by_Altemur_v1_3_1()
+    ui.setupUi(WP_AutoSender_by_Altemur_v1_3_1)
+    WP_AutoSender_by_Altemur_v1_3_1.show()
     sys.exit(app.exec_())
