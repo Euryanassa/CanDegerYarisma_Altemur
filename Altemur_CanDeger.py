@@ -1,8 +1,10 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import QFile
 from PythonMessage import WhatMsg
 import webbrowser
 import keyboard
 import time
+import qdarkstyle
 
 # Arayüz Kodu
 
@@ -12,13 +14,21 @@ class Ui_qtUIWhatttt(object):
         qtUIWhatttt.setObjectName("qtUIWhatttt")
         # Pencere boyutu
         qtUIWhatttt.resize(574, 461)
-
+        # setup stylesheet
+        qtUIWhatttt.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+        # or in new API
+        qtUIWhatttt.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5'))
+        
         # Butonun işlevini girdik
         self.EmptyFormat = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("EmptyFormat"))
         # Buton başlangıç koordinatları ve boyutu
         self.EmptyFormat.setGeometry(QtCore.QRect(50, 30, 231, 51))
         # Butonun temsili ismi
         self.EmptyFormat.setObjectName("EmptyFormat")
+
+        # create the application and the main window
+        # app = QtWidgets.QApplication(sys.argv)
+        # window = QtWidgets.QMainWindow()
 
         # Butonun işlevini girdik
         self.Gonder = QtWidgets.QPushButton(qtUIWhatttt, clicked = lambda: self.PressButton("Gonder"))
@@ -130,13 +140,15 @@ Written by,
             except:self.Output.setText("Dosya Bulunamadı")
 
         if pressed == 'Gonder':
-            try:WhatMsg.ThreadSendMsg(WhatMsg.SendMsg),self.Output.setText("Yollanıyor... Lütfen Bir Tuşa Basmayınız")
-            except:self.Output.setText("Öncelikle Dosyayı Yükleyiniz")
+            Checker = os.path.isfile('MesajExcel.xlsx')
+            if Checker == True:WhatMsg.ThreadSendMsg(WhatMsg.SendMsg),self.Output.setText("Yollanıyor... Lütfen Bir Tuşa Basmayınız")
+            else:self.Output.setText("Öncelikle Dosyayı Yükleyiniz")
             
         if pressed == "Temizle":
-            WhatMsg.delete_file()
-            self.Output.setText("Silme İşlemi Tamamlandı")
-
+            try:
+                WhatMsg.delete_file()
+                self.Output.setText("Silme İşlemi Tamamlandı")
+            except: self.Output.setText("Dosyanız Bulunmadığından, Silinemedi")
         if pressed == "DGKO":
             try:
                 WhatMsg.ThreadSendMsg(WhatMsg.SendOne,[self.Telefon.toPlainText(),self.Mesaj.toPlainText(),self.SAAT.text(),self.DK.text()])
@@ -156,6 +168,7 @@ Written by,
         self.UploadExcell.setText(_translate("qtUIWhatttt", "Excell Dosyası Kontrol"))
         self.Temizle.setText(_translate("qtUIWhatttt", "Listeyi Tezmile"))
         self.Supra.setText(_translate("qtUIWhatttt", "SUPRAA!"))
+        
 
 import pywhatkit as py
 import pandas as pd
@@ -232,8 +245,7 @@ class WhatMsg():
                         #Bilgilendirme Aşaması
                         # print(str(df["Telefon"][i],"Telefon Numaralı Kişiye",str(df["Mesaj"][i]),"Mesajınız Gönderildi"))
         else:pass
-        
-    # Chrome tabında ctr w yapar ve uyarı mesajına da entera basar ve kapar.
+
     def TabCloser():
         time.sleep(2)
         keyboard.press_and_release('ctrl+w')
